@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project X — Work Smarter</title>
+  <link rel="stylesheet" href="assignment.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Teamlo<span>Teamwork</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" onclick="closeMenu()">Home</a></li>
+        <li><a href="#features" onclick="closeMenu()">Features</a></li>
+        <li><a href="#pricing" onclick="closeMenu()">Pricing</a></li>
+      </ul>
+
+      <div class="nav-buttons">
+        <a href="login.html"><button onclick="showAlert('login')">login</button></a>
+        <button class="btn-primary" onclick="showAlert('register')">Register</button>
+      </div>
+
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-badge">✦ Best platform for Teamwork</div>
+    <h1 class="hero-heading">
+      Build faster.<br />
+      <span class="accent">Ship together.</span>
+    </h1>
+    <p class="hero-tagline">
+      Teamlo gives your team one place to plan, collaborate, and deliver — with mentors watching your back.
+    </p>
+    <button class="btn-cta" onclick="scrollToSection('pricing')">Get Started Free →</button>
+    <div class="hero-stats">
+      <div class="stat"><strong>10k+</strong><span>Teams</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>30 days</strong><span>Free trial</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><strong>₹1/day</strong><span>Per project</span></div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="section-label">Features</div>
+    <h2 class="section-heading">Everything your team needs</h2>
+    <p class="section-sub">Four pillars that keep projects on track and teams in sync.</p>
+
+    <div class="features-grid">
+      <div class="feature-card" data-index="01">
+        <div class="card-icon">🤝</div>
+        <h3>Team Collaboration</h3>
+        <p>Real-time chat, shared workspaces, and threaded discussions — so everyone stays on the same page without endless meetings.</p>
+      </div>
+      <div class="feature-card" data-index="02">
+        <div class="card-icon">✅</div>
+        <h3>Task Management</h3>
+        <p>Create, assign, and track tasks with deadlines and priorities. Kanban or list view — your choice, your workflow.</p>
+      </div>
+      <div class="feature-card" data-index="03">
+        <div class="card-icon">🎓</div>
+        <h3>Mentor Monitoring</h3>
+        <p>Mentors get a live dashboard of team progress. Flag blockers, give feedback, and guide projects without micromanaging.</p>
+      </div>
+      <div class="feature-card" data-index="04">
+        <div class="card-icon">📁</div>
+        <h3>File Upload</h3>
+        <p>Attach documents, images, and assets directly to tasks. Everything stays in context — no more hunting through email threads.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing">
+    <div class="section-label">Pricing</div>
+    <h2 class="section-heading">Simple. Transparent. Fair.</h2>
+    <p class="section-sub">No hidden fees. Start free, pay only when you grow.</p>
+
+    <div class="pricing-cards">
+
+      <div class="price-card free">
+        <div class="price-tag">Free</div>
+        <div class="price-amount">₹0<span>/30 days</span></div>
+        <p class="price-desc">Full access, no credit card required. Try everything before committing.</p>
+        <ul class="price-features">
+          <li>✦ All 4 features unlocked</li>
+          <li>✦ Up to 3 projects</li>
+          <li>✦ 1 GB file storage</li>
+          <li>✦ Community support</li>
+        </ul>
+        <button class="btn-outline" onclick="showAlert('trial')">Start Free Trial</button>
+      </div>
+
+      <div class="price-card pro">
+        <div class="price-badge">Most Popular</div>
+        <div class="price-tag">Credit Plan</div>
+        <div class="price-amount">₹1<span>/ credit</span></div>
+        <p class="price-desc">1 credit = 1 day access for one project. Buy exactly what you need.</p>
+        <ul class="price-features">
+          <li>✦ 1 Credit = ₹1</li>
+          <li>✦ 1 Credit = 1 day per project</li>
+          <li>✦ Credits never expire</li>
+          <li>✦ Priority support</li>
+        </ul>
+        <button class="btn-primary" onclick="showAlert('credits')">Buy Credits</button>
+      </div>
+
+    </div>
+
+    <div class="pricing-note">
+      💡 Running a 10-person team for 30 days on 5 projects? That's just <strong>₹150</strong>.
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">Teamlo<span>Teamwork</span></a>
+        <p>Work smarterwith your team, ship faster, grow together.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Useful Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#" onclick="showAlert('docs')">Docs</a></li>
+          <li><a href="#" onclick="showAlert('support')">Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#" onclick="showAlert('privacy')">Privacy Policy</a></li>
+          <li><a href="#" onclick="showAlert('terms')">Terms of Service</a></li>
+          <li><a href="#" onclick="showAlert('cookies')">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 Teamlo Teamwork. All rights reserved. Built with ☕ and late nights.</p>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="assignment.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f3f4f6;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      border: 1px solid #e5e7eb;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    .card-header { margin-bottom: 2rem; }
+    .card-header h1 { font-size: 22px; font-weight: 600; color: #111827; margin-bottom: 4px; }
+    .card-header p  { font-size: 13px; color: #6b7280; }
+
+    .field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 1.1rem; }
+    .field label { font-size: 13px; font-weight: 500; color: #374151; }
+
+    .field input {
+      width: 100%;
+      padding: 9px 12px;
+      font-size: 14px;
+      color: #111827;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      background: #f9fafb;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .field input::placeholder { color: #9ca3af; }
+    .field input:focus {
+      border-color: #7F77DD;
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(127, 119, 221, 0.12);
+    }
+
+    .gender-label { font-size: 13px; font-weight: 500; color: #374151; margin-bottom: 8px; }
+
+    .gender-group { display: flex; gap: 12px; margin-bottom: 1.5rem; }
+
+    .gender-option { flex: 1; }
+    .gender-option input[type="radio"] { display: none; }
+    .gender-option label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #374151;
+      cursor: pointer;
+      background: #f9fafb;
+      transition: all 0.15s;
+    }
+    .gender-option label:hover { border-color: #c4c1f0; background: #fff; }
+    .gender-option input:checked + label {
+      border-color: #7F77DD;
+      background: #f0effd;
+      color: #534AB7;
+      font-weight: 500;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 11px;
+      background: #7F77DD;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+    }
+    .login-btn:hover { background: #534AB7; box-shadow: 0 4px 12px rgba(83,74,183,0.3); }
+    .login-btn:active { transform: scale(0.98); }
+
+    .footer-text { text-align: center; font-size: 13px; color: #6b7280; margin-top: 1.2rem; }
+    .footer-text a { color: #7F77DD; text-decoration: none; font-weight: 500; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <h1>Welcome back</h1>
+      <p>Sign in to your account to continue</p>
+    </div>
+
+    <form>
+      <div class="field">
+        <label for="name">Full name</label>
+        <input type="text" id="name" placeholder="Your name">
+      </div>
+
+      <div class="field">
+        <label for="pass">Password</label>
+        <input type="password" id="pass" placeholder="Strong password">
+      </div>
+
+      <div class="field">
+        <label for="age">Age</label>
+        <input type="number" id="age" placeholder="Your age" min="1" max="120">
+      </div>
+
+      <p class="gender-label">Gender</p>
+      <div class="gender-group">
+        <div class="gender-option">
+          <input type="radio" name="gender" value="Male" id="male">
+          <label for="male">♂ Male</label>
+        </div>
+        <div class="gender-option">
+          <input type="radio" name="gender" value="Female" id="female">
+          <label for="female">♀ Female</label>
+        </div>
+      </div>
+
+      <button type="submit" class="login-btn">Login</button>
+      <p class="footer-text">Don't have an account? <a href="#">Sign up</a></p>
+    </form>
+  </div>
+</body>
+</html>
